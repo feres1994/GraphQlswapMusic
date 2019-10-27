@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+.home-intro {
+  height: 700px;
+  background-image: url("https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgb(7, 30, 38);
+  background: linear-gradient(
+    90deg,
+    rgba(7, 30, 38, 1) 0%,
+    rgba(113, 115, 164, 0.4) 45%,
+    rgba(242, 79, 117, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-data {
+  width: 70%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro-data h1 {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 5px 29px 15px rgba(0, 0, 0, 0.4);
+}
+.swap-logo {
+  background: -webkit-linear-gradient(
+    rgb(7, 57, 73),
+    #e64b70,
+    rgb(196, 102, 102)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 18px -16px 16px rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+.search-container {
+  width: 100%;
+}
+.search-container input {
+  width: 350px;
+  height: 40px;
+  border: 2px solid #d45f91;
+  border-radius: 15px 0px 0px 15px;
+  padding-left: 20px;
+  color: white;
+  font-size: 16px;
+  background: transparent;
+}
+.search-container button {
+  height: 40px;
+  width: 100px;
+  background-color: #ed4e76;
+  border: solid #e94d75;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  border-radius: 0px 15px 15px 0px;
+}
+.search-container input::placeholder {
+  color: white;
+}
+.artist-data {
+  height: 60px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid rgba(109, 52, 88, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/***********Start styling stars*********/
+.normal-star {
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.normal-star:hover {
+  font-weight: bold;
+  color: rgba(57, 52, 79, 0.6);
+}
+.fav-star {
+  color: rgba(57, 52, 79, 0.6);
+  cursor: pointer;
+  font-size: 19px;
+}

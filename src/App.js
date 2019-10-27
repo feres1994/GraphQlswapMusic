@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+import { Route, Switch } from "react-router-dom";
+import Favorite from "./components/favorite";
+import Details from "./components/details";
+import Home from "./components/home";
 
+const client = new ApolloClient({
+  uri: "https://graphbrainz.herokuapp.com/"
+});
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container-fluid my-main-app">
+        <ApolloProvider client={client}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/fav" component={Favorite} />
+            <Route exact path="/detail/:id" component={Details} />
+          </Switch>
+        </ApolloProvider>
+      </div>
     </div>
   );
 }

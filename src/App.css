@@ -1,7 +1,19 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-image: url("https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  color: white !important;
 }
-
+.my-main-app {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 31, 39, 1) 0%,
+    rgb(35, 54, 74) 35%,
+    rgba(242, 79, 117, 1) 100%
+  );
+  min-height: 100vh;
+}
 .App-logo {
   height: 40vmin;
 }
@@ -17,6 +29,21 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #c9c2c2;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: rgba(242, 79, 117, 0.8);
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
