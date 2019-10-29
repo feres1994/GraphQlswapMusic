@@ -1,0 +1,40 @@
+.sideBar {
+  position: absolute;
+  z-index: 144444;
+  width: 200px;
+  background-color: #162b3b;
+  transition: all 0.3s ease-in-out;
+
+  left: 0;
+  padding: 30px 20px;
+  height: 100%;
+  text-align: left;
+  box-shadow: 4px 5px 28px 7px rgba(71, 163, 207, 0.1);
+}
+.sideBar-logo {
+  height: 150px;
+}
+.sideBar-logo span {
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 5px;
+  cursor: pointer;
+  color: #ed4e76;
+}
+.sideBarOption a {
+  color: #92b0ca;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.toggleBtn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: block;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+  color: #295775;
+  padding: 5px;
+}

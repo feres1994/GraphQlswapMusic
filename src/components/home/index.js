@@ -1,6 +1,7 @@
 import React from "react";
 import ArtistContainer from "./artistContainer";
 import "./home.css";
+import SideBar from "../../shared/sideBar/sideBar";
 class Home extends React.Component {
   state = {
     inputData: "",
@@ -25,6 +26,10 @@ class Home extends React.Component {
           <div className="col-12 overlay">
             <div className="intro-data">
               <h1>
+                {" "}
+                Welcome To <span className="swap-logo">SwapMusic</span>
+              </h1>
+              <h1 className="text-blur-out">
                 {" "}
                 Welcome To <span className="swap-logo">SwapMusic</span>
               </h1>

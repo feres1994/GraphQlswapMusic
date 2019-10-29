@@ -1,0 +1,82 @@
+.artist-details {
+  height: 350px;
+  box-shadow: 15px 14px 16px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+.artist-name-life {
+  padding: 30px 7px;
+
+  height: 100px;
+}
+.artist-name-life p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+.artist-name-life span {
+  font-size: 13px;
+  font-weight: bold;
+  color: gray;
+  margin: 0px 5px;
+}
+.artist-sub-data {
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+.option-sud-data {
+  width: 125px;
+  text-align: left;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(147, 178, 188);
+}
+.artist-recordings {
+  padding: 20px;
+  box-shadow: 15px 14px 16px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+.artist-recordings h3 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+.artist-recordings div {
+  height: 500px;
+  box-shadow: 3px 2px 2px 2px inset rgba(45, 54, 75, 0.2);
+
+  text-align: left;
+  border: 1px solid rgba(71, 51, 81, 0.2);
+  overflow: auto;
+  padding: 30px;
+}
+
+.artist-recordings div p {
+  border-bottom: 1px solid rgba(71, 51, 81, 0.2);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+/*********CUSTOM SCROLL BAR RECORDINGS*********/
+.artist-recordings div::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.artist-recordings div::-webkit-scrollbar-track {
+  background: #c9c2c2;
+}
+
+/* Handle */
+.artist-recordings div::-webkit-scrollbar-thumb {
+  background: rgba(242, 79, 117, 0.8);
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

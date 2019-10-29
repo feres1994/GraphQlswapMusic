@@ -4,6 +4,7 @@
   background-image: url("https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 .overlay {
   width: 100%;
@@ -73,17 +74,39 @@
   color: white;
 }
 .artist-data {
-  height: 60px;
+  height: 320px;
   font-size: 15px;
+  width: 300px;
+  border-radius: 15px;
   font-weight: bold;
   text-align: left;
   padding: 15px;
-  border-bottom: 1px solid rgba(109, 52, 88, 0.3);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 5px 28px 7px rgba(71, 163, 207, 0.1);
+}
+.artist-data:hover {
+  height: 330px;
+  width: 310px;
+  border-radius: 20px;
+}
+.artist-option {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 7px;
+  position: relative;
 }
-
+.block-down-card {
+  padding-top: 60px;
+  box-sizing: border-box;
+  height: 80%;
+}
+.data-result {
+  color: rgb(147, 178, 188);
+}
+.card-icons i {
+  margin: 0px 5px;
+}
 /***********Start styling stars*********/
 .normal-star {
   font-size: 18px;
@@ -95,7 +118,53 @@
   color: rgba(57, 52, 79, 0.6);
 }
 .fav-star {
-  color: rgba(57, 52, 79, 0.6);
+  color: #edcd6d;
   cursor: pointer;
   font-size: 19px;
+}
+
+@media screen and (max-width: 767px) {
+  .search-container input {
+    width: 50%;
+  }
+
+  .intro-data h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .text-blur-out {
+    font-size: 3.3rem !important;
+  }
+}
+/*****************ANIMISTA***********************/
+
+.text-blur-out {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  -webkit-animation: text-blur-out 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-blur-out 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
 }
