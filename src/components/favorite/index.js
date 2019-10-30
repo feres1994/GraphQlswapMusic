@@ -17,10 +17,15 @@ export class index extends Component {
         <div className="col-12">
           <h3>favorite artists</h3>
         </div>
-        <div className="fav-artist-card col-lg-4" style={{ color: "white" }}>
-          {listFav &&
-            listFav.map(el => <ArtistItem artist={el} type={"fav"} />)}
-        </div>
+        {listFav &&
+          listFav.map(el => (
+            <div
+              className="fav-artist-card col-lg-4"
+              style={{ color: "white" }}
+            >
+              <ArtistItem artist={el} type={"fav"} />
+            </div>
+          ))}
       </div>
     );
   }

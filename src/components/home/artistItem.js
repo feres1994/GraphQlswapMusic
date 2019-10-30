@@ -41,7 +41,7 @@ class ArtistItem extends React.Component {
   };
   render() {
     const { stars, redirectTo, artistId } = this.state;
-    const { artist, type } = this.props;
+    const { artist } = this.props;
     if (redirectTo) {
       return <Redirect to={`/detail/${artistId}`} />;
     }
