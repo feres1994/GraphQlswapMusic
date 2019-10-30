@@ -2,7 +2,10 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 class ArtistItem extends React.Component {
   state = {
-    stars: "far fa-star normal-star",
+    stars:
+      this.props.type === "fav"
+        ? "fas fa-star fav-star"
+        : "far fa-star normal-star",
     redirectTo: false,
     artistId: ""
   };
@@ -38,7 +41,7 @@ class ArtistItem extends React.Component {
   };
   render() {
     const { stars, redirectTo, artistId } = this.state;
-    const { artist } = this.props;
+    const { artist, type } = this.props;
     if (redirectTo) {
       return <Redirect to={`/detail/${artistId}`} />;
     }

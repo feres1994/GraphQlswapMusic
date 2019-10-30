@@ -18,7 +18,8 @@ export class index extends Component {
           <h3>favorite artists</h3>
         </div>
         <div className="fav-artist-card col-lg-4" style={{ color: "white" }}>
-          {listFav && listFav.map(el => <ArtistItem artist={el} />)}
+          {listFav &&
+            listFav.map(el => <ArtistItem artist={el} type={"fav"} />)}
         </div>
       </div>
     );
